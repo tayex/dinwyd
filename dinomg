@@ -1749,7 +1749,7 @@ function library:CreateWindow(wName, hidebutton)
 						if slider.precision < 2 then
 							value = math.floor(value)
 						end
-						value = tonumber(string.format("%."..slider.precision.."f", value))
+						value = tonumber(string.format(""..slider.precision.."f", value))
 						local spercent = 1 - ((slider.max - value) / (slider.max - slider.min))
 						slider.sliderColor.Size = UDim2.new(spercent,0,1,0)
 						slider.sliderValue.Text = tostring(value)..slider.unit
